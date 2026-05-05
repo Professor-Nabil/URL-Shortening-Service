@@ -6,6 +6,24 @@ import { ZodError } from 'zod';
 const urlService = new UrlService();
 
 export class UrlController {
+  /**
+   * @openapi
+   * /shorten:
+   *   post:
+   *     summary: Create a new short URL
+   *     requestBody:
+   *       required: true
+   *       content:
+   *         application/json:
+   *           schema:
+   *             type: object
+   *             properties:
+   *               url:
+   *                 type: string
+   *     responses:
+   *       201:
+   *         description: Short URL created successfully
+   */
   async create(req: Request, res: Response, next: NextFunction) {
     try {
       const { url } = UrlSchema.parse(req.body);
@@ -17,6 +35,23 @@ export class UrlController {
     }
   }
 
+  /**
+   * @openapi
+   * /shorten/{shortCode}:
+   *   get:
+   *     summary: Retrieve original URL
+   *     parameters:
+   *       - in: path
+   *         name: shortCode
+   *         required: true
+   *         schema:
+   *           type: string
+   *     responses:
+   *       200:
+   *         description: Success
+   *       404:
+   *         description: Not Found
+   */
   async getByCode(req: Request, res: Response, next: NextFunction) {
     try {
       const { shortCode } = ShortCodeParamSchema.parse(req.params);
@@ -28,6 +63,30 @@ export class UrlController {
     }
   }
 
+  /**
+   * @openapi
+   * /shorten/{shortCode}:
+   *   put:
+   *     summary: Update an existing short URL
+   *     parameters:
+   *       - in: path
+   *         name: shortCode
+   *         required: true
+   *         schema:
+   *           type: string
+   *     requestBody:
+   *       required: true
+   *       content:
+   *         application/json:
+   *           schema:
+   *             type: object
+   *             properties:
+   *               url:
+   *                 type: string
+   *     responses:
+   *       200:
+   *         description: Success
+   */
   async update(req: Request, res: Response, next: NextFunction) {
     try {
       const { shortCode } = ShortCodeParamSchema.parse(req.params);
@@ -40,6 +99,21 @@ export class UrlController {
     }
   }
 
+  /**
+   * @openapi
+   * /shorten/{shortCode}:
+   *   delete:
+   *     summary: Delete a short URL
+   *     parameters:
+   *       - in: path
+   *         name: shortCode
+   *         required: true
+   *         schema:
+   *           type: string
+   *     responses:
+   *       204:
+   *         description: Deleted
+   */
   async delete(req: Request, res: Response, next: NextFunction) {
     try {
       const { shortCode } = ShortCodeParamSchema.parse(req.params);
@@ -50,6 +124,21 @@ export class UrlController {
     }
   }
 
+  /**
+   * @openapi
+   * /shorten/{shortCode}/stats:
+   *   get:
+   *     summary: Get URL statistics
+   *     parameters:
+   *       - in: path
+   *         name: shortCode
+   *         required: true
+   *         schema:
+   *           type: string
+   *     responses:
+   *       200:
+   *         description: Success
+   */
   async getStats(req: Request, res: Response, next: NextFunction) {
     try {
       const { shortCode } = ShortCodeParamSchema.parse(req.params);

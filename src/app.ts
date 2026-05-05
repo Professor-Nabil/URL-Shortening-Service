@@ -1,9 +1,12 @@
 import express, { type Request, type Response, type NextFunction } from 'express';
 import { urlRoutes } from './routes/urlRoutes.js';
+import { setupSwagger } from './config/swagger.js';
 
 export const app = express();
 
 app.use(express.json());
+
+setupSwagger(app);
 
 app.use('/', urlRoutes);
 
