@@ -35,6 +35,6 @@
 ## Phase 5: Verification & Testing
 
 - [x] Write integration tests for all API endpoints (using `supertest`).
-- [ ] Write E2E tests for main workflows.
-- [ ] Run all tests and ensure 100% pass rate.
+- [x] Write E2E tests for main workflows.
+- [x] Run all tests and ensure 100% pass rate.
 - [ ] Final project linting (`npm run lint`) and type check (`npm run check`).
