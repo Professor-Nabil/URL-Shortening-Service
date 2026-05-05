@@ -11,12 +11,12 @@
 
 ## Phase 2: Services (Business Logic - Inside Out)
 
-- [ ] Implement `UrlService` (Create short URL).
-- [ ] Implement `UrlService` (Retrieve original URL).
-- [ ] Implement `UrlService` (Update short URL).
-- [ ] Implement `UrlService` (Delete short URL).
-- [ ] Implement `UrlService` (Get URL Statistics).
-- [ ] Write unit tests for all `UrlService` methods.
+- [x] Implement `UrlService` (Create short URL).
+- [x] Implement `UrlService` (Retrieve original URL).
+- [x] Implement `UrlService` (Update short URL).
+- [x] Implement `UrlService` (Delete short URL).
+- [x] Implement `UrlService` (Get URL Statistics).
+- [x] Write unit tests for all `UrlService` methods.
 
 ## Phase 3: Controllers (API Layer - Outside)
 
