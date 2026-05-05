@@ -20,11 +20,11 @@
 
 ## Phase 3: Controllers (API Layer - Outside)
 
-- [ ] Implement `UrlController` for `POST /shorten`.
-- [ ] Implement `UrlController` for `GET /shorten/:shortCode`.
-- [ ] Implement `UrlController` for `PUT /shorten/:shortCode`.
-- [ ] Implement `UrlController` for `DELETE /shorten/:shortCode`.
-- [ ] Implement `UrlController` for `GET /shorten/:shortCode/stats`.
+- [x] Implement `UrlController` for `POST /shorten`.
+- [x] Implement `UrlController` for `GET /shorten/:shortCode`.
+- [x] Implement `UrlController` for `PUT /shorten/:shortCode`.
+- [x] Implement `UrlController` for `DELETE /shorten/:shortCode`.
+- [x] Implement `UrlController` for `GET /shorten/:shortCode/stats`.
 
 ## Phase 4: Routes & App Assembly
 
