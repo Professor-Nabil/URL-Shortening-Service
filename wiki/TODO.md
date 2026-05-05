@@ -37,4 +37,4 @@
 - [x] Write integration tests for all API endpoints (using `supertest`).
 - [x] Write E2E tests for main workflows.
 - [x] Run all tests and ensure 100% pass rate.
-- [ ] Final project linting (`npm run lint`) and type check (`npm run check`).
+- [x] Final project linting (`npm run lint`) and type check (`npm run check`).
