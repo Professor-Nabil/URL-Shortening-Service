@@ -2,12 +2,12 @@
 
 ## Phase 1: Foundation & Data Layer
 
-- [ ] Initialize project (npm/package.json, TypeScript config).
-- [ ] Setup folder structure (as defined in `File-Structure.md`).
-- [ ] Install dependencies (Node.js, Express, Prisma 6, Zod, Vitest, etc.).
-- [ ] Setup database (MariaDB) and configure `.env` files.
-- [ ] Setup Prisma (`schema.prisma` with `ShortURL` model as defined in `Model.md`).
-- [ ] Run initial migrations.
+- [x] Initialize project (npm/package.json, TypeScript config).
+- [x] Setup folder structure (as defined in `File-Structure.md`).
+- [x] Install dependencies (Node.js, Express, Prisma 6, Zod, Vitest, etc.).
+- [x] Setup database (MariaDB) and configure `.env` files.
+- [x] Setup Prisma (`schema.prisma` with `ShortURL` model as defined in `Model.md`).
+- [x] Run initial migrations.
 
 ## Phase 2: Services (Business Logic - Inside Out)
 
