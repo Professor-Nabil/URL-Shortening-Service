@@ -28,9 +28,9 @@
 
 ## Phase 4: Routes & App Assembly
 
-- [ ] Configure `routes/` (Express Routers).
-- [ ] Setup `app.ts` (Middleware, global error handling).
-- [ ] Setup `server.ts` (App bootstrap).
+- [x] Configure `routes/` (Express Routers).
+- [x] Setup `app.ts` (Middleware, global error handling).
+- [x] Setup `server.ts` (App bootstrap).
 
 ## Phase 5: Verification & Testing
 
