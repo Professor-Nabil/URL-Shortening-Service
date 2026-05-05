@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from 'express';
-import { UrlService } from '../services/UrlService';
-import { UrlSchema, ShortCodeParamSchema } from '../schemas/Zod-Schema';
+import { type Request, type Response, type NextFunction } from 'express';
+import { UrlService } from '../services/UrlService.js';
+import { UrlSchema, ShortCodeParamSchema } from '../schemas/Zod-Schema.js';
 import { ZodError } from 'zod';
 
 const urlService = new UrlService();
@@ -12,7 +12,7 @@ export class UrlController {
       const data = await urlService.create(url);
       res.status(201).json(data);
     } catch (error) {
-      if (error instanceof ZodError) return res.status(400).json({ status: 'error', errors: error.errors });
+      if (error instanceof ZodError) return res.status(400).json({ status: 'error', errors: error.issues });
       next(error);
     }
   }
@@ -35,7 +35,7 @@ export class UrlController {
       const data = await urlService.update(shortCode, url);
       res.json(data);
     } catch (error) {
-      if (error instanceof ZodError) return res.status(400).json({ status: 'error', errors: error.errors });
+      if (error instanceof ZodError) return res.status(400).json({ status: 'error', errors: error.issues });
       next(error);
     }
   }
